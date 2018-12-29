@@ -1,0 +1,16 @@
+{
+  "name": "zq-easy-uploader",
+  "version": "1.0.2",
+  "description": "极简文件上传工具",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "上传",
+    "文件",
+    "上传文件"
+  ],
+  "author": "zhangqian",
+  "license": "ISC"
+}
