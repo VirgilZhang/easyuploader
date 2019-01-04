@@ -1,6 +1,6 @@
 {
   "name": "zq-easy-uploader",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "极简文件上传工具",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,10 @@
     "文件",
     "上传文件"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VirgilZhang/easyuploader"
+  },
   "author": "zhangqian",
   "license": "ISC"
 }
