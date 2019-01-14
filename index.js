@@ -64,14 +64,20 @@ let upload = (resolve, reject)=>{
             }
             if(notFilter){
                 //文件类型不符合要求
-                reject("文件类型不符合要求");
+                if(uploadOption.errorCallback!=undefined && uploadOption.errorCallback!=null){
+                    uploadOption.errorCallback("文件类型不符合要求");
+                }
+                //reject("文件类型不符合要求");
                 return;
             }
         }
         let sizeM = file.size/1024/1024;
         if(sizeM > uploadOption.maxsize){
             //文件大小不符合要求
-            reject("文件大小不符合要求");
+            if(uploadOption.errorCallback!=undefined && uploadOption.errorCallback!=null){
+                uploadOption.errorCallback("文件大小不符合要求");
+            }
+            //reject("文件大小不符合要求");
             return;
         }
         var form = new FormData();
@@ -144,9 +150,10 @@ let upload = (resolve, reject)=>{
                     } catch (error) {
                         resolve(xhr.responseText);
                     }
-                }else{
-                    reject("上传失败，网络错误");
                 }
+                // else{
+                //     reject("上传失败，网络错误");
+                // }
             }
         }
         xhr.send(form);
